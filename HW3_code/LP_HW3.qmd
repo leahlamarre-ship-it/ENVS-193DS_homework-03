@@ -1,0 +1,39 @@
+---
+title: "Homework-03"
+author: "Leah Pettway"
+format: docx
+---
+
+Github repository: https://github.com/leahlamarre-ship-it/ENVS-193DS_homework-03
+
+```{r}
+#| label: set-up
+#| message: false
+
+library(tidyverse) #loading in packages
+library(janitor)
+library(here)
+library(readxl)
+
+salinity <- read_csv("/Users/leahpettway/ENVS-193DS/github/ENVS-193DS_homework-03/HW3_data/salinity-pickleweed (1).csv") #loading in the data
+
+
+```
+
+## Part 2. Problems
+
+### Problem 1. Slough soil salinity
+
+#### a. An appropriate test
+
+##### The appropriate tests to determine the strength of the relationship between salinity and California pickleweed biomnass is a linear regression and correlation test. Thew linear regression would see how much the predictor variable is related to the response which in this case would be the salinity and pickleweed biomass respectively. Testing correlation will then see how strong the relationship between the two variables are wether it is negative or positive.
+
+
+
+
+
+
+
+
+
+
