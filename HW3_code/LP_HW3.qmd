@@ -26,7 +26,22 @@ salinity <- read_csv("/Users/leahpettway/ENVS-193DS/github/ENVS-193DS_homework-0
 
 #### a. An appropriate test
 
-##### The appropriate tests to determine the strength of the relationship between salinity and California pickleweed biomnass is a linear regression and correlation test. Thew linear regression would see how much the predictor variable is related to the response which in this case would be the salinity and pickleweed biomass respectively. Testing correlation will then see how strong the relationship between the two variables are wether it is negative or positive.
+##### The appropriate tests to determine the strength of the relationship between salinity and California pickleweed biomnass is a linear regression and pearsons correlation test. The simple linear regression would see how much the predictor variable is related to the response which in this case would be the salinity and pickleweed biomass respectively. Testing correlation will then see how strong the relationship between the two variables are wether it is negative or positive.
+
+#### b. Create a visualization
+
+```{r}
+#| label: visualization of pickleweed and salinity
+
+ggplot(data = salinity, #use tussocks_clean dataframe
+       aes(x = salinity_mS_cm, #make the x-axis site
+           y = pickleweed)) +
+  geom_point(color = "forestgreen") +
+  labs(x = "Salinity (mS/cm)", #relabel the x-axis
+       y = "Pickleweed biomass (g)") +
+  theme_light()
+
+```
 
 
 
