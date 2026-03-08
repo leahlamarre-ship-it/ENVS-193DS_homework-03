@@ -1,7 +1,7 @@
 ---
 title: "Homework-03"
 author: "Leah Pettway"
-format: docx
+format: html
 ---
 
 Github repository: https://github.com/leahlamarre-ship-it/ENVS-193DS_homework-03
@@ -194,14 +194,18 @@ ggplot(data = my_data_clean, # using the cleaned my data for data frame
 ##### An affective visualization for my personal data could potentially look like data formatted like a rugby pitch or creatively showcasing rugby and the protein intake intermixed. The usage of heatmaps is used in rugby strategy so potentially something similiar with my data formatted to resemble rugby in a way can hook a reader and pull them into my visualization. Further incorporating visuals of food since my data relates to protein and food often can catch a readers eyes if presented well.
 
 #### b. Create a sketch of idea
+![Sketch](/Users/leahpettway/ENVS-193DS/github/Data-visualization/IMG_9070.png)
 
-#### c. Mkae a draft of your visualization
-
+#### c. Make a draft of your visualization
+ ![Draft](/Users/leahpettway/ENVS-193DS/github/Data-visualization/ENVS 193DS.png)
 #### d. Write an artist's statement
 
 ##### The content of my piece is showing a rugby pitch but seperated ot represent the days rugby and non-rugby as two different teams as well as the points in defense and attacking shapes. I included tryzones which are the score areas as a type of protein from my data and I tried to make the stands my caffeine intake as the fans above the pitch(field). I found rugby the sport itself influential and took the look of the field as inspiration. The form of my work wsa a digital piece created on my ipad with a stylus.
 
 #### e. Prep materials
+
+##### https://docs.google.com/presentation/d/1bT6IQwot0-sYsC-0H2kMh1y3w-CA-Mhz9qoSS9oiYV4/edit?usp=sharing
+
 
 ### Problem 4. Statistical critique
 
@@ -209,7 +213,7 @@ ggplot(data = my_data_clean, # using the cleaned my data for data frame
 
 ##### The statistical test included is a linear-mixed model effects. The occurrence and abundance are the response variables, while year of sampling or year of construction was the predictor variable along with types of substrates, site, soil squares, and texture of soil.
 
-
+![Figure](/Users/leahpettway/ENVS-193DS/github/ENVS-193DS_homework-03/HW3_code/Screenshot 2026-03-07 at 8.08.04 PM.png)
 #### b. 
 
 ##### The authors visually show the mean bee abundance and occurrence for multiple sampling sites and times while also including a standard error bar. The x and y axis are in logical places especially for containing multiple plots within one figure,along with the arrangement of the multiple plots. They ultimately do not show the underlying data.
