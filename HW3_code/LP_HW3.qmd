@@ -155,6 +155,22 @@ ggplot(data = my_data_clean, # using my data as the data frame
 
 ```
 
+```{r}
+
+ggplot(data = my_data_clean, # using the cleaned my data for data frame
+       aes(x = caffeine_intake_milligrams, # x-axis
+           y = amount_of_protein_grams)) + # y-axis
+  # first layer: showing the underlying data
+  geom_jitter(height = 0, # no jitter in the vertical direction
+              width = 0.1,
+              color = "orange") +
+  labs(x = "Caffeine intake (mg)", # labeling the axes for caffeine intake and amount of protein
+       y = "Amount of protein (g)",
+       title = "Protein intake on days with Caffeine intake") + 
+  theme_classic() + # using a theme
+  theme(legend.position = "none") # getting rid of the legend
+
+```
 
 
 
