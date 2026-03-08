@@ -21,6 +21,14 @@ my_data <- read_csv("/Users/leahpettway/ENVS-193DS/github/ENVS-193DS_homework-03
 
 ```
 
+```{r}
+#| label: cleaning personal data
+
+my_data_clean <- my_data |> # Creating the data frame to clean up data 
+  clean_names() #cleaning the whole my_data file
+
+```
+
 ## Part 2. Problems
 
 ### Problem 1. Slough soil salinity
@@ -86,7 +94,7 @@ ggplot(data = salinity_clean, # starting data frame using salinity_clean
 
 
 ```{r}
-#| label: QQ Plot
+#| label: QQ Plot 2
 
 # base layer: ggplot call
 ggplot(data = salinity_clean, # starting data frame using salinity_clean
@@ -156,6 +164,7 @@ ggplot(data = my_data_clean, # using my data as the data frame
 ```
 
 ```{r}
+#| label: Personal data visualization
 
 ggplot(data = my_data_clean, # using the cleaned my data for data frame
        aes(x = caffeine_intake_milligrams, # x-axis
@@ -179,6 +188,13 @@ ggplot(data = my_data_clean, # using the cleaned my data for data frame
 ##### Figure 2. Protein intake tends to increase on days with higher caffeine consumption. Points represent observations of daily caffeine intake (mg) and daily protein intake (g) recorded by me (n = 39). Each point represents one day of personal dietary intake. 
 
 ### Problem 3. 
+
+#### a. Describing what an affective visualization would look 
+
+##### An affective visualization for my personal data could potentially look like data formatted like a rugby pitch or creatively showcasing rugby and the protein intake intermixed. The usage of heatmaps is used in rugby strategy so potentially something similiar with my data formatted to resemble rugby in a way can hook a reader and pull them into my visualization. Further incorporating visuals of food since my data relates to protein and food often can catch a readers eyes if presented well.
+
+#### b. Create a sketch of idea
+
 
 
 
