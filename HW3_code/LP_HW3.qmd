@@ -172,9 +172,13 @@ ggplot(data = my_data_clean, # using the cleaned my data for data frame
 
 ```
 
+#### b. Captions
 
+##### Figure 1. Protein intake varies between rugby practice days and non-practice days. Points represent observations of daily protein intake (g) recorded by the author on rugby practice days and non-practice days (n = 39). Each point represents one day of recorded intake. The plot compares the distribution of protein intake across the two categories to examine whether protein consumption differs depending on whether I participated in rugby practice that day. 
 
+##### Figure 2. Protein intake tends to increase on days with higher caffeine consumption. Points represent observations of daily caffeine intake (mg) and daily protein intake (g) recorded by me (n = 39). Each point represents one day of personal dietary intake. 
 
+### Problem 3. 
 
 
 
