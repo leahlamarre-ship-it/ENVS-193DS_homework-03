@@ -201,7 +201,15 @@ ggplot(data = my_data_clean, # using the cleaned my data for data frame
 
 ##### The content of my piece is showing a rugby pitch but seperated ot represent the days rugby and non-rugby as two different teams as well as the points in defense and attacking shapes. I included tryzones which are the score areas as a type of protein from my data and I tried to make the stands my caffeine intake as the fans above the pitch(field). I found rugby the sport itself influential and took the look of the field as inspiration. The form of my work wsa a digital piece created on my ipad with a stylus.
 
+#### e. Prep materials
+
+### Problem 4. Statistical critique
+
+#### a. Revisit and summarize
+
+##### The statistical test included is a linear-mixed model effects. The occurrence and abundance are the response variables, while year of sampling or year of construction was the predictor variable along with types of substrates, site, soil squares, and texture of soil.
 
 
+#### b. 
 
-
+The authors visually show the mean bee abundance and occurrence for multiple sampling sites and times while also including a standard error bar. The x and y axis are in logical places especially for containing multiple plots within one figure,along with the arrangement of the multiple plots. They ultimately do not show the underlying data.
