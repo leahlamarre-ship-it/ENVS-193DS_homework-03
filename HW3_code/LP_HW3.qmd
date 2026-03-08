@@ -99,16 +99,61 @@ ggplot(data = salinity_clean, # starting data frame using salinity_clean
 ```
 
 
-##### The assumptions I needed to check a few assumptions for a pearson correlation test, which  is a linear relationship between the variables and a normal distribution of of the variances for each variable. For the linear relationship I visually checked the data once I formatted it into a scatterplot to see the ralitonship between the two variables which appears to be linear due to the general trend of the points. I
+##### The assumptions I needed to check a few assumptions for a pearson correlation test, which  is a linear relationship between the variables and a normal distribution of  the variances for each variable. For the linear relationship I visually checked the data once I formatted it into a scatterplot to see the ralitonship between the two variables which appears to be linear due to the general trend of the points. In checking for normal distribution I created two qqplots to see the distribution of the variences and in both plots the points and reference line were quite aligned.
+
+```{r}
+#| label: Pearson Test
+
+cor.test(salinity_clean$salinity_m_s_cm, salinity_clean$pickleweed_g,
+         method = "pearson") # using the salinity_clean for a dataframe and then choosing both columns for the pearson's R correlation test
+
+```
 
 
+#### d. Results communication
 
 
+To evaluate the strength of soil salinity and pickle weed biomass I used a Pearson's correlation test, which I came to the conclusion to use since both variables are continuous and after subsequent checks the data seems to have a linear relationship and normal distribution of variance. The result of the Pearson's R test is that we found a moderate relationship between soil salinity and pickle weed biomass( Pearson's r = 0.53, t(21) = 2.9, p = 0.01, ⍺ = 0.05 )
 
 
+#### e. Test implications
+
+In the results of the correlation test, a moderate relationship was found between the variables soil salinity and pickle weed biomass. These results suggest that while soil salinity may have some affect on the pickle weed biomass it may not be the ultimate determinant of the biomass. That means for the best success in pickle weed some soil salinity is good but making sure no extremes in soil salinity are emphasized in planting pickle weed.
+
+#### f. Double check your own work
+
+```{r}
+
+cor.test(salinity_clean$salinity_m_s_cm, salinity_clean$pickleweed_g,
+         method = "spearman") # using the salinity_clean for a dataframe and then choosing both columns for the Spearmancorrelation test
+
+```
 
 
+##### The two tests would've led me to the same decision that we would fail to reject the null hypothesis as well as finding a moderate relationship between the variables soil salinity and pickle weed biomass We did ultimately find a moderate relationship between soil salinity and pickle weed biomass (Spearman ⍴ = 0.59, S = 824, p = 0.003, ⍺ = 0.05).
 
+
+### Problem 2. Personal data
+
+#### a. Updating your visualizations
+
+```{r}
+#| label: Personal data observations
+ggplot(data = my_data_clean, # using my data as the data frame
+       aes(x = rugby_practice_day_yes_or_no, # setting the x axis as the type of day
+           y = amount_of_protein_grams, # setting the y axis as the amount of protein
+           fill = rugby_practice_day_yes_or_no)) + # adding color to the boxplot
+  geom_boxplot(alpha = 0.7) + # boxplot a little transparent to still see the observations
+  geom_jitter(width = 0.1, alpha = 0.6) + # jittering the points to stay closer together
+  labs(x = "Rugby or Non-Rugby Day", # relabeling the axis to be more clear
+       y = "Amount of Protein (g)",
+       title = "Do I Eat More Protein on Rugby or Non-Rugby Practice Days?") + # adding a title to the graph
+  scale_fill_manual(values = c("yes" = "maroon",
+                               "no" = "lightblue")) +
+  theme_classic() +
+  theme(legend.position = "none")
+
+```
 
 
 
