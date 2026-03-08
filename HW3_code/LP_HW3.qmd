@@ -11,12 +11,13 @@ Github repository: https://github.com/leahlamarre-ship-it/ENVS-193DS_homework-03
 #| message: false
 
 library(tidyverse) #loading in packages
-library(janitor)
-library(here)
-library(readxl)
+library(janitor) #loading in janitor
+library(here) #loading in here
+library(readxl) #loading in readxl
 
 salinity <- read_csv("/Users/leahpettway/ENVS-193DS/github/ENVS-193DS_homework-03/HW3_data/salinity-pickleweed (1).csv") #loading in the data
 
+my_data <- read_csv("/Users/leahpettway/ENVS-193DS/github/ENVS-193DS_homework-03/HW3_data/Personal_data.csv") #loading in personal data
 
 ```
 
@@ -26,22 +27,87 @@ salinity <- read_csv("/Users/leahpettway/ENVS-193DS/github/ENVS-193DS_homework-0
 
 #### a. An appropriate test
 
-##### The appropriate tests to determine the strength of the relationship between salinity and California pickleweed biomnass is a linear regression and pearsons correlation test. The simple linear regression would see how much the predictor variable is related to the response which in this case would be the salinity and pickleweed biomass respectively. Testing correlation will then see how strong the relationship between the two variables are wether it is negative or positive.
+##### The appropriate tests to determine the strength of the relationship between salinity and California pickleweed biomnass is a pearson and spearman correlation test since both test how two variables are related to eachother or their strength of correlation. 
 
 #### b. Create a visualization
 
 ```{r}
-#| label: visualization of pickleweed and salinity
+#| label: cleaning
 
-ggplot(data = salinity, #use tussocks_clean dataframe
-       aes(x = salinity_mS_cm, #make the x-axis site
-           y = pickleweed)) +
-  geom_point(color = "forestgreen") +
-  labs(x = "Salinity (mS/cm)", #relabel the x-axis
-       y = "Pickleweed biomass (g)") +
-  theme_light()
+salinity_clean <- salinity |> #new object created from salinity data frame
+  clean_names() |> # cleaning up names so all are lowercase and no spaces
+  rename("pickleweed_g" = "pickleweed") # including the unit pickle weed is in
 
 ```
+
+
+```{r}
+#| label: visualization of pickleweed and salinity
+
+ggplot(data = salinity_clean, #use salinity_clean data frame
+       aes(x = salinity_m_s_cm, #make the x-axis salinity_m_s_cm
+           y = pickleweed_g)) + # make the y-axis pickleweed_g
+  geom_point(color = "forestgreen") + # add point geometry
+  labs(x = "Salinity (mS/cm)", #relabel the x-axis
+       y = "Pickleweed biomass (g)") + # relabel the y-axis
+  theme_light() #change theme from default
+
+```
+
+#### C. Checking Assumptions
+
+##### Assumption of a linear relationship
+
+```{r}
+ggplot(data = salinity_clean, #use salinity_clean data frame
+       aes(x = salinity_m_s_cm, #make the x-axis the predictor variable
+           y = pickleweed_g)) + #make the y axis the response variable
+  geom_point(color = "forestgreen") + #add point geometry to plot colored different from the default
+  labs(x = "Salinity (mS/cm)", #relabel the x-axis
+       y = "Pickleweed biomass (g)") + #relabel the y- axis
+  theme_light() # change theme from default
+```
+
+
+##### Assumption of normal distribution
+
+```{r}
+#| label: QQ Plot
+
+# base layer: ggplot call
+ggplot(data = salinity_clean, # starting data frame using salinity_clean
+       aes(sample = pickleweed_g)) + # y-axis for QQ plot 
+  # first layer QQ reference line
+  geom_qq_line(color = "red") + # using red so line is easier to see
+  # second layer: QQ plot
+  geom_qq()
+  
+```
+
+
+```{r}
+#| label: QQ Plot
+
+# base layer: ggplot call
+ggplot(data = salinity_clean, # starting data frame using salinity_clean
+       aes(sample = salinity_m_s_cm)) + # y-axis for QQ plot 
+  # first layer QQ reference line
+  geom_qq_line(color = "red") + # using red so line is easier to see
+  # second layer: QQ plot
+  geom_qq() 
+
+```
+
+
+##### The assumptions I needed to check a few assumptions for a pearson correlation test, which  is a linear relationship between the variables and a normal distribution of of the variances for each variable. For the linear relationship I visually checked the data once I formatted it into a scatterplot to see the ralitonship between the two variables which appears to be linear due to the general trend of the points. I
+
+
+
+
+
+
+
+
 
 
 
