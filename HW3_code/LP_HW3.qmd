@@ -212,4 +212,12 @@ ggplot(data = my_data_clean, # using the cleaned my data for data frame
 
 #### b. 
 
-The authors visually show the mean bee abundance and occurrence for multiple sampling sites and times while also including a standard error bar. The x and y axis are in logical places especially for containing multiple plots within one figure,along with the arrangement of the multiple plots. They ultimately do not show the underlying data.
+##### The authors visually show the mean bee abundance and occurrence for multiple sampling sites and times while also including a standard error bar. The x and y axis are in logical places especially for containing multiple plots within one figure,along with the arrangement of the multiple plots. They ultimately do not show the underlying data.
+
+#### c. Aesthetic clarity
+
+##### The authors handled visual clutter decently well it still can be confusing at first to look at the graphs since there is multiple showing slightly different things. The data to ink ratio is pretty good with keeping the text to a minimum and mainly highlighting the actual data.
+
+#### d. Reccomendations
+
+##### I would change the way the species names are represented as well as maybe changing the patterns used to differentiate the different years and species. I belive maybe shortening the names would help reduce text and confusion since a lot of the bee species names are very similiar, as well as finding patterns that vary mnore so the differnt columns dont look as similiar.
